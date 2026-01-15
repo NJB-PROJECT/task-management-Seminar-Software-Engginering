@@ -376,7 +376,6 @@ class TaskRepository {
 }
 
 // Export untuk digunakan di file lain
-// Export untuk digunakan di file lain
 if (typeof module !== 'undefined' && module.exports) {
     // Hanya import jika kita benar-benar di Node.js environment
     if (typeof EnhancedTask === 'undefined') {

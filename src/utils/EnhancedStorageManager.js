@@ -313,6 +313,11 @@ class EnhancedStorageManager {
     }
     
     _updateMetadata(entity, timestamp) {
+        // Prevent infinite recursion for _metadata updates
+        if (entity === '_metadata') {
+            return;
+        }
+
         const metadata = this.getMetadata();
         metadata.entities[entity] = {
             lastUpdated: timestamp,
