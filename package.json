@@ -6,11 +6,8 @@
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js",
-    "test": "node validate-setup.js && npm run test:log",
-    "test:raw": "jest",
+    "test": "jest",
     "test:watch": "jest --watch",
-    "test:log": "jest --runInBand > logs\\test-log.txt 2>&1",
-    "test:coverage": "jest --coverage > logs\\test-coverage.txt 2>&1",
     "lint": "eslint src/",
     "format": "prettier --write src/",
     "validate": "node validate-setup.js"
@@ -31,7 +28,7 @@
     "prettier": "^2.8.0"
   },
   "dependencies": {
-    "express": "^4.22.1"
+    "express": "^4.18.0"
   },
   "engines": {
     "node": ">=14.0.0"
